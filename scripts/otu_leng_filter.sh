@@ -68,3 +68,5 @@ fi
 # removes empty files
 
 for i in $(ls -l $output_folder | awk -F " " '{print $5"_"$9}' | grep -E '^1_|^0_' | grep -E '.aln$'); do a=$(echo $i | awk -F "_" '{print $2}'); rm $output_folder/$a ; done;
+
+rm -f sed*
